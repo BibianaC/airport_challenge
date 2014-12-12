@@ -20,5 +20,8 @@ class Plane
     !@fly
   end
 
-
+  def take_off!
+    in_air!()
+  end
+  
 end

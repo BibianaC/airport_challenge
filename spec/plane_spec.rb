@@ -24,5 +24,16 @@ describe Plane do
     expect(plane).to be_landed
   end
 
+  it "can take off" do
+    plane.land!
+    expect(plane).to be_landed
+    plane.take_off!
+    expect(plane).not_to be_landed
+  end
+
+  it "should change status to flying after taking off" do
+    plane.take_off!
+    expect(plane).to be_flying
+  end
 
 end
