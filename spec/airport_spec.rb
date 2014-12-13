@@ -17,4 +17,10 @@ describe Airport do
     expect(airport.plane_count).to eq(0)
   end
 
+  it "should not allow planes to land when it is full" do
+    100.times {airport.receive(:plane)}
+    expect(airport).to be_full
+    expect(lambda {airport.receive(:plane)}).to raise_error(RuntimeError, "Airport is full")
+  end
+
 end
