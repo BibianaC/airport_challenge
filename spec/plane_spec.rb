@@ -25,14 +25,12 @@ describe Plane do
   context 'taking off and landing' do
 
     it "can land" do
-      expect(plane).to be_flying
       plane.land!
       expect(plane).not_to be_flying
     end
 
     it "can take off" do
       plane.land!
-      expect(plane).to be_landed
       plane.take_off!
       expect(plane).not_to be_landed
     end
