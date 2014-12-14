@@ -24,4 +24,9 @@ class Plane
     in_air!()
   end
 
+  def land_at!(airport)
+    airport.receive_plane
+    land!()
+  end
+
 end

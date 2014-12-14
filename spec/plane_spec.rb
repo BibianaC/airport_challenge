@@ -3,6 +3,7 @@ require 'plane'
 describe Plane do
 
   let(:plane) {Plane.new}
+  let(:airport) {double :airport}
 
   context 'flying status' do
 
@@ -41,6 +42,12 @@ describe Plane do
 
     it "should change status to landed after landing" do
       plane.land!
+      expect(plane).to be_landed
+    end
+
+    it "should have a landed status when in the airport" do
+      expect(airport).to receive(:receive_plane)
+      plane.land_at!(airport)
       expect(plane).to be_landed
     end
 
