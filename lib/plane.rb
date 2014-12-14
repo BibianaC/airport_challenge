@@ -23,5 +23,5 @@ class Plane
   def take_off!
     in_air!()
   end
-  
+
 end
