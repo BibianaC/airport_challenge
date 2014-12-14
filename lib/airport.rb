@@ -1,3 +1,5 @@
+require_relative 'weather'
+
 class Airport
 
   DEFAULT_CAPACITY = 20
@@ -16,11 +18,13 @@ class Airport
   end
 
   def receive(plane)
-    raise "Airport is full" if full?
+    raise 'Airport is full' if full?
+    raise 'You cannot land, it is too stormy' if stormy?
     @planes << plane
   end
 
   def release(plane)
+    raise 'You cannot take off, it is too stormy' if stormy?
     @planes.delete(plane)
   end
 
