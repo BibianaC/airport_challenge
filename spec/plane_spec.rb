@@ -11,11 +11,6 @@ describe Plane do
       expect(plane).to be_flying
     end
 
-    it "should have a flying status when in the air" do
-      plane.in_air!
-      expect(plane).to be_flying
-    end
-
     it "should change status to flying after taking off" do
       plane.take_off!
       expect(plane).to be_flying
@@ -30,11 +25,27 @@ describe Plane do
       expect(plane).not_to be_flying
     end
 
+    it "can not land if it is not flying" do
+      plane.land!
+      expect{plane.land!}.to raise_error(RuntimeError, "You have already landed!")
+    end
+
+    it "should be able to land at an airport" do
+      expect(airport).to receive(:receive).with(plane)
+      plane.land_at(airport)
+    end
+
     it "can take off" do
       plane.land!
       plane.take_off!
-      expect(plane).not_to be_landed
+      expect(plane).to be_flying
     end
+
+    # it "should be able to take off from an airport"
+    #   plane.land!
+    #   expect(airport).to receive(:release).with(plane)
+    #   plane.take_off_from(airport)
+    # end
 
   end
 
@@ -42,13 +53,13 @@ describe Plane do
 
     it "should change status to landed after landing" do
       plane.land!
-      expect(plane).to be_landed
+      expect(plane).not_to be_flying
     end
 
-    it "should have a landed status when in the airport" do
-      expect(airport).to receive(:receive_plane)
-      plane.land_at!(airport)
-      expect(plane).to be_landed
+    it "should not be flying after landing at the airport" do
+      allow(airport).to receive(:receive).with(plane)
+      plane.land_at(airport)
+      expect(plane).not_to be_flying      
     end
 
   end

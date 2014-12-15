@@ -1,32 +1,29 @@
 class Plane
 
   def initialize
-    in_air!()
+    take_off!
   end
 
   def flying?
-    @fly
-  end
-
-  def in_air!
-    @fly = true
+    @flying
   end
 
   def land!
-    @fly = false
-  end
-
-  def landed?
-    !@fly
+    raise "You have already landed!" unless flying?
+    @flying = false
   end
 
   def take_off!
-    in_air!()
+    @flying = true
   end
 
-  def land_at!(airport)
-    airport.receive_plane
-    land!()
+  def land_at(airport)
+    airport.receive(self)
+    land!
+  end
+
+  def take_off_from(airport)
+    # ...
   end
 
 end

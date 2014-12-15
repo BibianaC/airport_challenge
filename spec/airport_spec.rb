@@ -28,7 +28,7 @@ describe Airport do
 
     it "should not allow planes to land when it is full" do
       allow(airport).to receive(:stormy?) {false}
-      100.times {airport.receive(:plane)}
+      airport.capacity.times {airport.receive(:plane)}
       expect(airport).to be_full
       expect(lambda {airport.receive(:plane)}).to raise_error(RuntimeError, 'Airport is full')
     end

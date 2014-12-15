@@ -2,24 +2,26 @@ module Weather
 
   DEFAULT_CONDITION = ['stormy', 'sunny', 'sunny', 'sunny']
 
-  def current_weather
-    @current_weather = DEFAULT_CONDITION.sample
-  end
+  # No need to use all these methods as I am not using them anywhere else
 
-  def sunny!
-    @current_weather = 'sunny'
-  end
+  # def current_weather
+  #   @current_weather = DEFAULT_CONDITION.sample
+  # end
 
-  def sunny?
-    @current_weather == 'sunny'
-  end
+  # def sunny!
+  #   @current_weather = 'sunny'
+  # end
 
-  def stormy!
-    @current_weather = 'stormy'
-  end
+  # def sunny?
+  #   @current_weather == 'sunny'
+  # end
+
+  # def stormy!
+  #   @current_weather = 'stormy'
+  # end
 
   def stormy?
-    @current_weather == 'stormy'
+    DEFAULT_CONDITION.sample == 'stormy'
   end
 
 end
