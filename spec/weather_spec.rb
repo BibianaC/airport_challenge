@@ -1,5 +1,8 @@
 require 'weather'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 class WeatherCondition; include Weather; end
 
 describe Weather  do

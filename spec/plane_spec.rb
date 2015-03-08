@@ -1,5 +1,8 @@
 require 'plane'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 describe Plane do
 
   let(:plane) {Plane.new}

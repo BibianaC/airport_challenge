@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/BibianaC/airport_challenge/badges/gpa.svg)](https://codeclimate.com/github/BibianaC/airport_challenge)
+[![Test Coverage](https://codeclimate.com/github/BibianaC/airport_challenge/badges/coverage.svg)](https://codeclimate.com/github/BibianaC/airport_challenge)
 
 Airport Challenge
 =================

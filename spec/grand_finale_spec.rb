@@ -1,6 +1,9 @@
 require 'airport'
 require 'plane'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 describe "The grand finale (last spec)" do
 
 	let(:airport) {Airport.new(:capacity => 100)}

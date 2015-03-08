@@ -1,0 +1,38 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Bibs/Documents/MakersAcademy/airport_challenge/lib/plane.rb": [
+        1,
+        null,
+        1,
+        108,
+        null,
+        null,
+        1,
+        13,
+        null,
+        null,
+        1,
+        7,
+        6,
+        null,
+        null,
+        1,
+        110,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1425808264
+  }
+}
