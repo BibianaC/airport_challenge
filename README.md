@@ -26,3 +26,16 @@ Responsibilites |  Collaborators
 --------------- | ----------------
 Land            | Airport, weather
 Take off        | Airport, weather
+
+## Context
+
+Week 1 challenge at Makers Academy
+
+## Resources
+
+- Ruby
+- Rspec
+
+## Contributors
+
+- Bibiana Cristòfol
