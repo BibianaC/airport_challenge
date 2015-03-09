@@ -22,8 +22,4 @@ class Plane
     land!
   end
 
-  def take_off_from(airport)
-    # ...
-  end
-
 end

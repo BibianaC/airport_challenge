@@ -44,12 +44,6 @@ describe Plane do
       expect(plane).to be_flying
     end
 
-    # it "should be able to take off from an airport"
-    #   plane.land!
-    #   expect(airport).to receive(:release).with(plane)
-    #   plane.take_off_from(airport)
-    # end
-
   end
 
   context 'landing status' do
